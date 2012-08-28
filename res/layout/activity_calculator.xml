@@ -1,0 +1,261 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#333">
+
+    <TextView
+        android:id="@+id/displayPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        android:gravity="right"
+        android:padding="@dimen/padding_medium"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        tools:context=".CalculatorActivity" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/displayPanel" 
+        >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/keypadCopy"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="Copy"
+                android:textSize="24sp" 
+                android:layout_width="80dp" />
+            
+            <Button
+                android:id="@+id/keypadC"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="C"
+                android:textSize="24sp" 
+                android:layout_width="80dp" />
+            <Button
+                android:id="@+id/keypadAC"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="AC"
+                android:textSize="24sp"
+                android:layout_width="80dp" />
+            <Button
+                android:id="@+id/keypadBS"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="BS"
+                android:textSize="24sp" 
+                android:layout_width="80dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_weight="1" >
+                        
+            <Button
+                android:id="@+id/keypad7"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="7"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/keypad8"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="8"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/keypad9"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="9"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypadDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="/"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_weight="1" >
+            
+            <Button
+                android:id="@+id/keypad4"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="4"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypad5"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="5"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypad6"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="6"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypadMulti"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="*"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_weight="1" >
+            
+            <Button
+                android:id="@+id/keypad1"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="1"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypad2"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="2"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypad3"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="3"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypadSub"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="-"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_weight="1" >
+            
+            <Button
+                android:id="@+id/keypad0"
+                android:onClick="numKeyOnClick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="0"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypadDot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="."
+                android:textSize="24sp" />
+            
+            <Button
+                android:id="@+id/keypadEq"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="="
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/keypadAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="+"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        
+        
+    </TableLayout>
+
+</LinearLayout>
